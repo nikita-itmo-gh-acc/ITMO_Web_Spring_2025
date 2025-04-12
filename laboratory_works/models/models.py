@@ -1,6 +1,6 @@
 from typing import Optional
 from sqlmodel import SQLModel, Field, Relationship
-from default_models import ProfileDefault, BookDefault, BookInfoDefault, TagDefault, ShareRequestDefault
+from .default_models import ProfileDefault, BookDefault, BookInfoDefault, TagDefault, ShareRequestDefault
 
 class BookTagLink(SQLModel, table=True):
     info_id: Optional[int] = Field(default=None, foreign_key='bookinfo.id', primary_key=True)

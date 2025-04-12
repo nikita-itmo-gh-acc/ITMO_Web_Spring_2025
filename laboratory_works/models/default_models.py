@@ -12,6 +12,7 @@ class ProfileDefault(SQLModel):
 class BookDefault(SQLModel):
     owner_id: int = Field(default=None, foreign_key='profile.id')
     info_id: int = Field(default=None, foreign_key='bookinfo.id')
+    print_date: date | None = None
     own_since: date
 
 
@@ -19,6 +20,7 @@ class BookInfoDefault(SQLModel):
     title: str
     author: str
     release_date: date
+    publisher: str | None = None
     genre: str
 
 
