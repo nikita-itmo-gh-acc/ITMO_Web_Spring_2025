@@ -4,6 +4,8 @@ from sqlmodel import SQLModel, Field, Relationship
 
 class ProfileDefault(SQLModel):
     name: str
+    password: str
+    email: str = Field(unique=True)
     description: str
     register_date: date
     birth_date: date
